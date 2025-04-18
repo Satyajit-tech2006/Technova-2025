@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Scroll-triggered pop animation
+  // Scroll-triggered pop animation (updated to trigger every time)
   const popSection = document.getElementById("popSection");
   if (popSection) {
     const observer = new IntersectionObserver(
@@ -83,6 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
           if (entry.isIntersecting) {
             popSection.classList.add("visible");
             popSection.classList.remove("hidden");
+          } else {
+            popSection.classList.remove("visible");
+            popSection.classList.add("hidden");
           }
         });
       },
@@ -102,12 +105,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  
   // Keyboard shortcut: Ctrl + Shift + L to focus login email
   document.addEventListener("keydown", (e) => {
     if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "l") {
       const loginEmail = document.getElementById("email");
       if (loginEmail) loginEmail.focus();
     }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Scroll animations for sections
+  const sections = document.querySelectorAll('.section');
+  const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.2
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('fadeIn');
+          } else {
+              entry.target.classList.remove('fadeIn');
+          }
+      });
+  }, options);
+
+  sections.forEach(section => {
+      section.classList.add('hidden');
+      observer.observe(section);
   });
 });

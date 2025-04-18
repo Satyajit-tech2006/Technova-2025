@@ -709,4 +709,130 @@ ul {
     padding: 20px 10px;
     margin-top: 40px;
   }
-  
+  /* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #2d6a4f;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+nav .nav-links li {
+  margin-left: 2rem;
+}
+
+nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav .nav-links li a:hover {
+  color: #d9fbe8;
+}
+
+/* Section Styling */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  color: #2d6a4f;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:nth-child(odd) {
+  background-color: #eaf6f2;
+}
+
+.company-cards, .student-cards, .referral-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+
+/* Footer */
+footer {
+  position: relative; /* Remove fixed positioning */
+  width: 100%;
+  padding: 20px;
+  background-color: #2e6a47;
+  color: #d9f7d7;
+  text-align: center;
+  margin-top: auto; /* Push footer to the bottom if there's enough content */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.section {
+  animation: fadeInUp 1s ease-out;
+}
