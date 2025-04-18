@@ -138,3 +138,76 @@ document.addEventListener("DOMContentLoaded", () => {
       observer.observe(section);
   });
 });
+
+// Highlight active nav link
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('.nav-links a');
+  const current = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+      if (link.getAttribute("href") === current) {
+          link.classList.add("active");
+      }
+  });
+});
+// Smooth Scroll on Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetID = this.getAttribute('href');
+      if (targetID !== "#") {
+          const target = document.querySelector(targetID);
+          if (target) {
+              target.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start'
+              });
+          }
+      }
+  });
+});
+
+// Fade-In Animation on Scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+      }
+  });
+}, {
+  threshold: 0.1
+});
+
+document.querySelectorAll('.card').forEach(card => {
+  observer.observe(card);
+});
+// Basic chat appending
+const chatForm = document.getElementById('chatForm');
+const chatInput = document.getElementById('chatInput');
+const chatMessages = document.getElementById('chatMessages');
+
+chatForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const messageText = chatInput.value.trim();
+    if (messageText === '') return;
+
+    const messageEl = document.createElement('div');
+    messageEl.className = 'message sent';
+    messageEl.textContent = messageText;
+    chatMessages.appendChild(messageEl);
+
+    chatInput.value = '';
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    // Simulated response
+    setTimeout(() => {
+        const reply = document.createElement('div');
+        reply.className = 'message received';
+        reply.textContent = "Thanks for your message!";
+        chatMessages.appendChild(reply);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 1000);
+});
+
