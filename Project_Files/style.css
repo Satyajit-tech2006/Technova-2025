@@ -590,3 +590,123 @@ ul {
     }
   }
   
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  body {
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  .site-header {
+    padding: 20px;
+    background: #2e802d;
+    color: #fff;
+    text-align: center;
+    position: relative;
+  }
+  
+  .site-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  #searchBar {
+    padding: 10px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+  }
+  
+  .popup-content h2 {
+    margin-bottom: 20px;
+  }
+  
+  .popup-content label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .popup-content input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+  }
+  
+  .popup-content button {
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .alumni-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(2, 3, 19, 0.473);
+  }
+  
+  .alumni-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-right: 20px;
+  }
+  
+  .alumni-card .info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    background: #296133;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+  }
+  
