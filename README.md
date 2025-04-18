@@ -1,47 +1,52 @@
-# Alumni Mentorship Platform
+# Petiole - TnP Framework for Workshops, Sessions, Job Opportunities, and Alumni Support (Frontend)
 
 ## Overview
-The **Alumni Mentorship Platform** is a web application designed to connect students with alumni for mentorship, career guidance, and placement-related discussions. This platform aims to provide students with valuable insights into their career growth and job readiness through personalized interactions with alumni.
 
-### Key Features
-- **User Authentication**: Secure sign-up and login for both students and alumni to ensure privacy and data security.
-- **Group Sessions**: Alumni can conduct group sessions on various topics related to career growth, placements, and industry trends.
-- **Personal Chat and Call**: Direct messaging and call features that allow students to communicate with alumni one-on-one.
-- **Placement-Related Discussion Boards**: Discussion boards where students can ask questions, share experiences, and engage in discussions about placements.
-- **Feedback and Review System**: Students can provide feedback and reviews for the mentorship sessions and alumni can rate their interactions with students.
+**Petiole** serves as a bridge, much like the petiole in plants connects the leaf to the stem, fostering a strong bond between students and alumni. This web application is designed to nurture mentorship, career guidance, and placement-related discussions, providing a platform for meaningful interactions and growth. It connects students and alumni, allowing them to share knowledge, career opportunities, and insights, while helping students develop the skills necessary for success in their careers.
+
+## Key Features
+
+### 1. Event Scheduling and Management
+- Calendar-like interface for scheduling workshops and training sessions.
+- TnP cell can organize events, notify participants, and manage registrations.
+
+### 2. Real-Time Chat Rooms
+- Dedicated chat rooms for various workshops, topics, and discussions.
+- Features include threaded discussions, file sharing, and pinned messages.
+- Moderation tools for managing active discussions effectively.
+
+### 3. One-on-One Messaging and Call Requests
+- Students can initiate private chats with alumni for mentorship and career advice.
+- Students can request voice or video calls with alumni for detailed discussions.
+- Alumni have the option to accept, schedule, or decline call requests.
+
+### 4. Live Session Hosting and Recordings
+- Host live workshops and training sessions directly on the platform.
+- A repository of recorded sessions for students to review later.
+- Search and filter options for easy access to specific recordings.
+
+### 5. Internship and Job Vacancy Board
+- TnP and alumni can post internship and job opportunities for students.
+- TnP posts are automatically marked as **verified**.
+- Alumni posts must first be **verified by TnP** before being marked as **verified**. 
+
+### 6. Letters of Recommendation (LoR)
+- Alumni can write and provide Letters of Recommendation (LoR) for students.
+- Students can request LoRs for internships, job applications, or academic purposes.
+- Alumni can review and approve/reject LoR requests from students.
+
+### 7. Notifications and Reminders
+- Real-time notifications for upcoming events, chat updates, new messages, call request statuses, and job/posting updates.
+- Calendar integration to keep track of scheduled events and approved calls.
+
+### 8. User-Friendly Dashboard
+- Centralized dashboard to manage schedules, join chat rooms, access recordings, initiate chats, apply for jobs, and track call requests.
+- Administrative panel for TnP staff to oversee events, chat rooms, job postings, and user interactions.
 
 ## Technology Stack
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js/Express.js (or other suitable backend frameworks)
-- **Database**: MongoDB/MySQL (or any other suitable database)
-- **Authentication**: JWT (JSON Web Token) for secure user authentication
-- **Real-Time Communication**: WebSockets for chat and call features
+- **HTML**: For the structure of the platform.
+- **CSS**: For responsive and aesthetic design.
+- **JavaScript**: To enable interactivity and real-time communication.
+- **Frameworks**: Tailwind CSS for efficient UI development.
+- **WebSockets**: For real-time chat functionalities.
 
-## Features Breakdown
-1. **User Authentication**:
-   - Students and alumni can sign up and log in using secure authentication mechanisms.
-   - Each user type will have specific roles and permissions.
-
-2. **Group Sessions**:
-   - Alumni can schedule and host group sessions on various topics such as placements, interview preparation, and career advice.
-
-3. **Personal Chat and Call**:
-   - One-on-one chats between students and alumni for personalized mentorship.
-   - Voice and video call functionality for real-time communication.
-
-4. **Placement Discussion Boards**:
-   - Forum-like spaces for students to discuss placement processes, share experiences, and get advice from alumni.
-
-5. **Feedback and Reviews**:
-   - After each mentorship session, students can leave reviews for alumni, and alumni can rate their interactions with students.
-
-## Installation
-
-### Prerequisites
-- Node.js and npm
-- MongoDB/MySQL (depending on your database choice)
-
-### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/alumni-mentorship-platform.git
